@@ -44,6 +44,7 @@ public class Task_1_1_res {
 						}
 						
 					if ( j == 0 ) {
+						
 						strBuilder.append(Character.toLowerCase(char1));
 						}
 				}
