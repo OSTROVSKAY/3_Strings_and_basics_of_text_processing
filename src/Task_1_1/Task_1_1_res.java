@@ -17,5 +17,33 @@ public class Task_1_1_res {
 	и иногда для именования файлов на компьютере.
 */
 	
-	
+	//ПРЕОБРАЗОВАНИЕ МАССИВА НАЗВАНИЙ ПЕРЕМЕННЫХ ИЗ CAMELCASE В SNAKECASE
+	public String [] toSnakeCase (String [] camelCase) {
+		
+		String [] snakeCase = new String[camelCase.length];
+		
+		for (int i = 0; i < snakeCase.length; i++) {
+			
+			StringBuilder strBuilder = new StringBuilder();
+			
+			for (int j = 0; j < camelCase[i].length(); j++) {
+				
+				char letter = camelCase[i].toCharArray()[j];
+				
+				if (Character.isLowerCase(letter)) {
+					
+					strBuilder.append(letter);
+					
+				} else {
+					
+					strBuilder.append("_");
+					
+					strBuilder.append(Character.toLowerCase(letter));
+					
+				}
+			}
+			snakeCase[i] = strBuilder.toString();
+		}
+		return snakeCase;
+	}
 }
