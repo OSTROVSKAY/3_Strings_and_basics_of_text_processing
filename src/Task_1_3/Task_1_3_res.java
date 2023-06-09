@@ -26,14 +26,22 @@ public class Task_1_3_res {
 		
 		int count = 0;
 		
+		System.out.println("-------------------------------------------------------------------------------------------------------------");
+		System.out.print("Цифры в строке : ");
+		
 		for (int i = 0; i < line.length(); i++) {
 			
 			if( Character.isDigit(line.charAt(i)) ) {
+				
+				System.out.print(line.charAt(i) + "(№ : "+ i + ")" + "  ");
 				
 				count++;
 			}
 			
 		}
+		
+		System.out.println("");
+		System.out.println("-------------------------------------------------------------------------------------------------------------");
 		
 		return count;
 	}
