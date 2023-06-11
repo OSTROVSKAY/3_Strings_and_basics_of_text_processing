@@ -13,23 +13,30 @@ public class Task_1_4 {
 		System.out.println("ПРОГРАММА : РАСЧЁТ КОЛИЧЕСТВА ЧИСЕЛ В СТРОКЕ");
 		System.out.println("--------------------------------------------");
 		
+		Task_1_4_res Inp = new Task_1_4_res();
+		
 		Scanner scanner = new Scanner(System.in);
 		
 		// Ввод начальной строки для подсчёта чисел
 		System.out.println("----------------------------------------------");
 		System.out.println("Введите начальную строку для подсчёта чисел : ");
 		System.out.println("----------------------------------------------");
-		System.out.print("Введите данные......... :   ");
+		System.out.print("Введите данные......... :  ");
 		
 		String line = scanner.nextLine();
 		
-		// String line = "1223 7676 nnn 887878 24344343 9999";
+		System.out.println("---------------------------------------------------");
+		System.out.print("Вывод строки на печать :");
 		
-		Task_1_4_res Inp = new Task_1_4_res();
+		Inp.Print_line (line);
 		
-		System.out.println("-----------------------------------------");
-		System.out.println("Количество чисел в строке : " + Inp.countNumbers(line));
-		System.out.println("-----------------------------------------");
+		// РАСЧЁТ КОЛИЧЕСТВА ЧИСЕЛ В СТРОКЕ И ВЫВОД ЧИСЕЛ НА ПЕЧАТЬ
+		
+		int counter = Inp.countNumbers(line);
+		
+		System.out.println("-------------------------------");
+		System.out.println("Количество чисел в строке : " + counter);
+		System.out.println("-------------------------------");
 	}
 	
 }
