@@ -189,9 +189,9 @@ public class Task_1_4_2_res {
 				}
 			}
 			
-			else if (count == 0 & massiv[i] != '\n' & count_end != massiv.length & counter != 1 ){
+			else if (count == 0 & massiv[i] != '\n' & count_end != massiv.length ){
 				
-				if ( counter > 0 ) {
+				if ( (counter + 1 ) > 1 ) {
 				
 				System.out.println("");
 				System.out.println("------------------------");

@@ -79,7 +79,7 @@ public class Task_1_4_res {
 			}
 			
 			
-			else if (count == 0 & count_end != line.length() & counter != 1) {
+			else if (count == 0 & count_end != line.length() ) {
 				
 				if ( counter > 0 ) {
 				
