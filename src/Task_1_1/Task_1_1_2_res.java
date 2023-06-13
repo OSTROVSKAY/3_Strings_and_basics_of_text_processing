@@ -15,7 +15,7 @@ public class Task_1_1_2_res {
 		int max_size = 0;
 		
 		for ( int i = 0; i < begin.length; i++ ) {
-		
+			
 			for ( int j = 0; j < begin[i].length; j++ ) {
 				
 				if ( ! Character.isLowerCase(begin[i][j]) & j != 0 )
@@ -44,7 +44,7 @@ public class Task_1_1_2_res {
 		char[][] result = new char[begin.length][max_size];
 		
 		for ( int i = 0; i < begin.length; i++ ) {
-		
+			
 			int size = begin[i].length;
 			
 			char[] temp = new char[size];

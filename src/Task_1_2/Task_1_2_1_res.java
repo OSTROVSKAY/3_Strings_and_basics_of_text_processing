@@ -57,7 +57,7 @@ public class Task_1_2_1_res {
 				
 				result[i + 5 + count1] = 'r';
 				
-				count1 = count1 +diff;
+				count1 = count1 + diff;
 				
 				i = i + 3;
 				
