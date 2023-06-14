@@ -34,7 +34,7 @@ public class Task_2_2 {
 	
 	// ВСТАВКА В СТРОКЕ ПОСЛЕ КАЖДОГО СИМВОЛА 'A' СИМВОЛА 'B'
 	
-	StringBuilder strBuilder= Input.insert_line (line);
+	StringBuilder strBuilder = Input.insert_line (line);
 	
 	String line_new = strBuilder.toString();
 	
