@@ -10,8 +10,8 @@ public class Task_2_6_res {
 			
 				System.out.print(line.charAt(i));
 			}
-			
-		}
+		
+	}
 	
 	
 	// ПОЛУЧЕНИЕ ИЗ ЗАДАННОЙ СТРОКИ НОВОЙ, ПОВТОРИВ КАЖДЫЙ СИМВОЛ ДВАЖДЫ
