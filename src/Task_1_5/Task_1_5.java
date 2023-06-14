@@ -46,7 +46,9 @@ public class Task_1_5 {
 		System.out.println("Начальная строка состоит только из пробелов");
 		System.out.println("-------------------------------------------");
 		}
-	
+		
+		scanner.close();
+		
 	}
 	
 }

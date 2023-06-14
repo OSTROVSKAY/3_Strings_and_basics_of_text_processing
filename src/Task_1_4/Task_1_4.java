@@ -37,6 +37,8 @@ public class Task_1_4 {
 		System.out.println("-------------------------------");
 		System.out.println("Количество чисел в строке : " + counter);
 		System.out.println("-------------------------------");
+		
+		scanner.close();
 	}
 	
 }
