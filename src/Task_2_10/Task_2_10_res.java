@@ -73,5 +73,5 @@ public class Task_2_10_res {
 		
 		return count;
 	}
-
+	
 }
