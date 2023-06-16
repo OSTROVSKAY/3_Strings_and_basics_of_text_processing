@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 	
 public class Task_3_1_res {
 	
-	// Отсортировать абзацы по количеству предложений
+	// Сортировка абзацев по количеству предложений
 	public void bySentenceCount(String text) {
 		
 		String[] paragraphs = splitByParagraph(text);
@@ -22,7 +22,7 @@ public class Task_3_1_res {
 	}
 	
 	
-	// В каждом предложении отсортировать слова по длине
+	// Сортировка слов по длине в каждом предложении
 	public void byWordLength(String text) {
 		
 		String[] paragraphs = splitByParagraph(text);
@@ -40,7 +40,10 @@ public class Task_3_1_res {
 	}
 	
 	
-	// Отсортировать лексемы в предложении по убыванию количества вхождений заданного символа, а в случае равенства – по алфавиту
+	/*
+	Сортировка лексем в предложении по убыванию количества
+	вхождений заданного символа, а в случае равенства сортировка по алфавиту
+	*/
 	public void byLexemeCount(String text, char symbol) {
 		
 		String[] paragraphs = splitByParagraph(text);
@@ -51,12 +54,12 @@ public class Task_3_1_res {
 			
 			String result = Arrays.stream(words)
 					
-					//Сравниваем слова по количеству вхождений символа
+					// Сравнение слов по количеству вхождений заданного символа
 					.sorted(Comparator.comparingLong((String word) -> word.chars()
 							.filter(ch -> ch == symbol)
 							.count())
 							
-							//А если число вхождений одинаковое, то тогда по алфавиту сравниваем
+							// В случае, если число вхождений заданного символа одинаковое, происходит сортировка по алфавиту
 							.thenComparing(String.CASE_INSENSITIVE_ORDER)).collect(Collectors.joining(" "));
 							
 			print1(result);
@@ -64,7 +67,7 @@ public class Task_3_1_res {
 	}
 	
 	
-	// Разделение строки : Spliter
+	// Разделение строки на абзацы с помощью Spliter
 	/*
 	Метод split в Java разделяет строку на подстроки,
 	используя разделитель, который определяется с помощью
@@ -76,7 +79,7 @@ public class Task_3_1_res {
 	}
 	
 	
-	// Разделение строки : Spliter
+	// Разделение строки на слова с помощью Spliter
 	/*
 	Метод split в Java разделяет строку на подстроки,
 	используя разделитель, который определяется с помощью
@@ -88,13 +91,13 @@ public class Task_3_1_res {
 	}
 	
 	
-	// Печать результата : PrintResult
+	// Печать результата ( печать строки ) : PrintResult
 	public void print1(String text) {
 		
 		System.out.println(text);
 	}
 	
-	// Печать результата : PrintResult
+	// Печать результата ( печать массива строк ) : PrintResult
 	public void print2(String[] paragraphs) {
 		
 		for (String paragraph : paragraphs) {
