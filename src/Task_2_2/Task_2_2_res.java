@@ -13,7 +13,7 @@ public class Task_2_2_res {
 			
 		}
 		
-		// ВСТАВКА В СТРОКЕ ПОСЛЕ КАЖДОГО СИМВОЛА 'A' СИМВОЛА 'B'
+		// ВСТАВКА В СТРОКЕ ПОСЛЕ КАЖДОГО СИМВОЛА 'a' СИМВОЛА 'b'
 		
 		public StringBuilder insert_line (String line) {
 			
