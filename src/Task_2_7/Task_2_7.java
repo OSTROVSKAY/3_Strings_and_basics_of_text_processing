@@ -45,5 +45,5 @@ public class Task_2_7 {
 	scanner.close();
 	
 	}
-
+	
 }
