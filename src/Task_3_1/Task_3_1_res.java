@@ -5,9 +5,79 @@ import java.util.Arrays;
 	
 import java.util.Comparator;
 	
+import java.util.Scanner;
+	
 import java.util.stream.Collectors;
 	
 public class Task_3_1_res {
+		
+		// Ввод данных
+		public int InputInt() {
+			
+			int check = 1;
+			int x = 0;
+			
+			Scanner scanner = new Scanner(System.in);
+				
+				do {
+					System.out.print("Введите Данные :.............: " + "  ");
+					String xx = scanner.nextLine();
+					
+					check = 1;
+					
+					try {
+						x = Integer.parseInt(xx);
+						}
+							catch (NumberFormatException e) {
+								
+								check = 0;
+								System.out.println("------------------------------------------");
+								System.out.println("Данные введены не правильно. Введите снова");
+								System.out.println("------------------------------------------");
+							}
+						
+						System.out.println("----------------------------------");
+						
+						} while ( check == 0 );
+						
+						return x;
+			}
+	
+	
+	// Повтор работы программы
+	public int repeat() {
+		
+		int check = 0;
+		
+		do {
+			System.out.println("Введите : 1 - Да или 0 - Нет");
+			System.out.println("----------------------------");
+			
+			check = InputInt();
+			
+			if ( check < 0 | check > 1 )
+				{
+				System.out.println("------------------------------------------------");
+				System.out.println("Введеные данные не равны 0 или 1. Введите снова.");
+				System.out.println("------------------------------------------------");
+				}
+			
+		} while ( check < 0 | check > 1 );
+		
+		try {
+			Thread.sleep(500);
+			}
+			catch(InterruptedException ex)
+				{
+				System.out.println("-------------------------");
+				System.out.println("Ошибка в работе программы");
+				System.out.println("-------------------------");
+				}
+			
+		return check;
+		
+	}
+	
 	
 	// Сортировка абзацев по количеству предложений
 	public void bySentenceCount(String text) {
@@ -15,7 +85,7 @@ public class Task_3_1_res {
 		String[] paragraphs = splitByParagraph(text);
 		
 		Arrays.sort(paragraphs, (paragraph1, paragraph2) ->
-		
+			
 			paragraph1.split("[!?.:]+").length >= paragraph2.split("[!?.:]+").length ? 1 : -1);
 		
 		print2(paragraphs);
