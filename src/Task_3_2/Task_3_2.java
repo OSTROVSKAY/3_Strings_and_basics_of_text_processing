@@ -47,7 +47,7 @@ public class Task_3_2 {
 			
 			" <heading>Важное напоминание</heading>\n" +
 			
-			" <body/>\n" +
+			" <body>Позвони мне сегодня!</body>\n" +
 			
 			" </note>\n" +
 			
