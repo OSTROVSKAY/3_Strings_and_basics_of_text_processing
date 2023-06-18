@@ -1,6 +1,8 @@
 	
 package Task_1_3;
 	
+import java.io.IOException;
+	
 import java.util.Scanner;
 	
 public class Task_1_3_2_res {
@@ -11,8 +13,9 @@ public class Task_1_3_2_res {
 		int x = 0;
 		int check = 1;
 		
+		Scanner scanner = new Scanner(System.in);
+		
 		do {
-			Scanner scanner = new Scanner(System.in);
 			System.out.print("Введите Данные :.............: " + "  ");
 			
 			check = 1;
@@ -42,7 +45,7 @@ public class Task_1_3_2_res {
 	
 	
 	// Ввод одного символа для массива символов
-	public char Inp_char() {
+	public char Inp_char() throws IOException {
 	
 	int x = 0;
 	
@@ -63,12 +66,14 @@ public class Task_1_3_2_res {
 		char1 = (char)x;
 		
 	} while (char1 == '\n');
-		
-		return char1;
+	
+	return char1;
+	
 	}
 	
+	
 	// Ввод массива символов
-	public char[] Inp_mass(int size) {
+	public char[] Inp_mass(int size) throws IOException {
 		
 		char mass[] = new char[size];
 		
@@ -158,6 +163,66 @@ public class Task_1_3_2_res {
 		
 		System.out.println("");
 		System.out.println("--------------------------------------------------------------------");
+		
+	}
+	
+	
+	// Ввод целого числа для повтора работы программы
+	public int InputInt1() {
+		
+		int check = 1;
+		int x = 0;
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		do {
+			String xx = scanner.nextLine();
+			
+			check = 1;
+			
+			try {
+				x = Integer.parseInt(xx);
+				}
+			catch (NumberFormatException e) {
+				check = 0;
+				}
+			
+		} while ( check == 0 );
+		
+		return x;
+	}
+	
+	
+	// Повтор работы программы
+	public int repeat() {
+		
+		int check = 0;
+		
+		do {
+			System.out.print("Введите : 1 - Да или 0 - Нет :  ");
+			
+			check = InputInt1();
+			
+			if ( check < 0 | check > 1 )
+				{
+				System.out.println("------------------------------------------------");
+				System.out.println("Введеные данные не равны 0 или 1. Введите снова.");
+				System.out.println("------------------------------------------------");
+				}
+			
+		} while ( check < 0 | check > 1 );
+		
+		try {
+			Thread.sleep(500);
+			}
+			catch(InterruptedException ex)
+				{
+				System.out.println("-------------------------");
+				System.out.println("Ошибка в работе программы");
+				System.out.println("-------------------------");
+				}
+				
+		return check;
 		
 	}
 }
