@@ -7,7 +7,7 @@ public class Task_2_10_res {
 	public void Print_line(String line) {
 		
 		for (int i = 0; i < line.length(); i++) {
-		
+			
 			System.out.print(line.charAt(i));
 		}
 	}
@@ -20,11 +20,11 @@ public class Task_2_10_res {
 		
 		for ( int i = 0; i < line.length(); i++ ) {
 			
-			 stringBuilder.append(line.charAt(i)); 
+			stringBuilder.append(line.charAt(i));
 			
-			if( ( line.charAt(i) == '.' | line.charAt(i) == '!' | line.charAt(i) == '?' ) ) 
-				{ 
-				stringBuilder.append('_'); 
+			if( ( line.charAt(i) == '.' | line.charAt(i) == '!' | line.charAt(i) == '?' ) )
+				{
+				stringBuilder.append('_');
 				}
 		}
 		
@@ -52,24 +52,23 @@ public class Task_2_10_res {
 			for ( int j = 0; j < new_line1[i].length(); j++) {
 				
 				if(new_line1[i].charAt(j) == '.')
-					
-				check = 1;
-				
+					{
+					check = 1;
+					}
 			}
 			
-			 count = count + check ;
+			count = count + check;
 			
 			if(check == 1) {
 				
 				for ( int j = 0; j < new_line1[i].length(); j++) {
 					
-						System.out.print(new_line1[i].charAt(j));
+					System.out.print(new_line1[i].charAt(j));
 				}
-				
 				
 			}
 			
-			if  (count == 0) {System.out.print("Предложений нет"); }
+			if (count == 0) {System.out.print("Предложений нет"); }
 			
 		}
 		System.out.println("");
@@ -80,91 +79,83 @@ public class Task_2_10_res {
 	
 	// Вывод на печать восклицательных предложений
 	public void Print_exclam(String[] new_line1) {
-			
+		
 		System.out.print("Предложения, оканчивающиеся восклицательным знаком : ");
-			
+		
 		int check = 0;
-			
+		
 		int count = 0;
-			
+		
 		for ( int i = 0; i < new_line1.length; i++) {
-				
+			
 			check = 0;
-				
+			
 			for ( int j = 0; j < new_line1[i].length(); j++) {
-					
+				
 				if(new_line1[i].charAt(j) == '!')
-						
+					{
 					check = 1;
-					
+					}
 			}
 				
-				count = count + check ;
+				count = count + check;
 				
 			if(check == 1) {
-					
+				
 				for ( int j = 0; j < new_line1[i].length(); j++) {
 						
 						System.out.print(new_line1[i].charAt(j));
 				}
-					
-					
+				
 			}
 			
-				
 		}
 		
-		//System.out.print(count );
-		if  (count == 0) {System.out.print("Предложений нет"); }
+		if (count == 0) {System.out.print("Предложений нет"); }
 		System.out.println("");
 		System.out.println("------------------------------------------------------------------------");
-			
+		
 	}
 	
 	
 	// Вывод на печать вопросительных предложений
 	public void Print_interrog(String[] new_line1) {
-				
+		
 		System.out.print("Предложения, оканчивающиеся вопросительным знаком : ");
-				
-		//int check = 0;
-				
+		
+		int check = 0;
+		
 		int count = 0;
-				
+		
 		for ( int i = 0; i < new_line1.length; i++) {
-					
-			//check = 0;
-					
+			
+			check = 0;
+			
 			for ( int j = 0; j < new_line1[i].length(); j++) {
-						
+				
 				if(new_line1[i].charAt(j) == '?')
-							
-					count ++;
-						
-			}
-					
-			//count = count + check ;
-					
-			if(count == 1) {
-					
-				for ( int j = 0; j < new_line1[i].length(); j++) {
-							
-						System.out.print(new_line1[i].charAt(j));
-				}
-						
-						
+					{
+					check = 1;
+					}
 			}
 			
-					
+			count = count + check;
+			
+			if(check == 1) {
+				
+				for ( int j = 0; j < new_line1[i].length(); j++) {
+				
+				System.out.print(new_line1[i].charAt(j));
+				}
+			}
 		}
 		
-		//System.out.print(count );
-		if  (count != 1) {System.out.print("Предложений нет"); }
+		if (count == 0) {System.out.print("Предложений нет"); }
 		System.out.println("");
 		System.out.println("------------------------------------------------------------------------");
-				
-	}
 		
+	}
+	
 	
 	// ОПРЕДЕЛЕНИЕ КОЛИЧЕСТВА И ВЫВОД НА ПЕЧАТЬ ПРЕДЛОЖЕНИЙ В СТРОКЕ
 	/*
@@ -196,7 +187,6 @@ public class Task_2_10_res {
 		}
 		
 		
-		//System.out.println("------------------------------------------------------------------------");
 		System.out.println("Количество предложений оканчивающихся точкой : " + count1);
 		System.out.println("------------------------------------------------------------------------");
 		System.out.println("------------------------------------------------------------------------");
@@ -216,7 +206,6 @@ public class Task_2_10_res {
 			}
 		}
 		
-		//System.out.println("------------------------------------------------------------------------");
 		System.out.println("Количество предложений оканчивающихся восклицательным знаком : " + count2);
 		System.out.println("------------------------------------------------------------------------");
 		System.out.println("------------------------------------------------------------------------");
@@ -235,7 +224,6 @@ public class Task_2_10_res {
 			}
 		}
 		
-		//System.out.println("------------------------------------------------------------------------");
 		System.out.println("Количество предложений оканчивающихся вопросительным знаком : " + count3);
 		System.out.println("------------------------------------------------------------------------");
 		System.out.println("------------------------------------------------------------------------");
