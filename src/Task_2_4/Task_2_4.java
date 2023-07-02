@@ -14,16 +14,15 @@ public class Task_2_4 {
 	System.out.println("ПРОГРАММА : СОСТАВЛЕНИЕ СЛОВА ИЗ ЧАСТЕЙ ДРУГОГО СЛОВА");
 	System.out.println("-----------------------------------------------------");
 	
-	Task_2_4_res Input = new Task_2_4_res();
-	
 	String word1 = "информатика";
+	
 	System.out.println("-----------------------------------------------------");
 	System.out.println("НАЧАЛЬНОЕ СЛОВО : " + word1);
 	System.out.println("-----------------------------------------------------");
 	
 	// СОСТАВЛЕНИЕ СЛОВА ИЗ ЧАСТЕЙ ДРУГОГО СЛОВА
 	
-	String word2 = Input.build_word(word1);
+	String word2 = Task_2_4_res.build_word(word1);
 	
 	System.out.println("-----------------------------------------------------");
 	System.out.println("СЛОВО, СОСТАВЛЕННОЕ ИЗ ЧАСТЕЙ ДРУГОГО СЛОВА : " + word2);

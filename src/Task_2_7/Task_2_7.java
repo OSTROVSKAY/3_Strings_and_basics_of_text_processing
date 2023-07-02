@@ -27,15 +27,13 @@ public class Task_2_7 {
 	
 	String line = scanner.nextLine();
 	
-	Task_2_7_res Input = new Task_2_7_res();
-	
 	// Вывод на печать начальной строки
 	System.out.println("-------------------------------------------------------------------------------");
 	System.out.println("Вывод на печать начальной строки : " + line);
 	System.out.println("-------------------------------------------------------------------------------");
 	
 	// УДАЛЕНИЕ ИЗ СТРОКИ ПОВТОРЯЮЩИХСЯ СИМВОЛОВ И ВСЕХ ПРОБЕЛОВ
-	String new_line = Input.delete_from_string(line);
+	String new_line = Task_2_7_res.delete_from_string(line);
 	
 	// Вывод на печать итоговой строки
 	System.out.println("-------------------------------------------------------------------------------");

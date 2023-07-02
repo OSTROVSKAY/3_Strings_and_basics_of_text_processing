@@ -12,8 +12,6 @@ public class Task_1_2_1 {
 		System.out.println("ПРОГРАММА : ЗАМЕНА В СТРОКЕ ВСЕХ ВХОЖДЕНИЙ 'word' НА 'letter'");
 		System.out.println("-------------------------------------------------------------");
 		
-		Task_1_2_1_res Input = new Task_1_2_1_res();
-		
 		char [] word = new char[]
 				{
 				'w', 'o', 'r', 'd'
@@ -23,7 +21,7 @@ public class Task_1_2_1 {
 				{
 				'l', 'e', 't', 't', 'e', 'r'
 				};
-			
+				
 		int diff = letter.length - word.length;
 		
 		
@@ -36,9 +34,9 @@ public class Task_1_2_1 {
 				'i', 'n', ' ', 'm', 'i', 'c', 'r', 'o', 's', 'o', 'f', 't', ' ',
 				'w', 'o', 'r', 'd'
 				};
-			
+				
 		// ЗАМЕНА В СТРОКЕ ВСЕХ ВХОЖДЕНИЙ 'word' НА 'letter'
-		char[] result = Input.array_convers(begin, diff);
+		Task_1_2_1_res.array_convers(begin, diff);
 		
 	}
 	

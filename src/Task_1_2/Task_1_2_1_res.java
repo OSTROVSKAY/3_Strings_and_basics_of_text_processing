@@ -4,7 +4,7 @@ package Task_1_2;
 public class Task_1_2_1_res {
 	
 	// ЗАМЕНА В СТРОКЕ ВСЕХ ВХОЖДЕНИЙ 'word' НА 'letter'
-	public char[] array_convers( char[] begin, int diff) {
+	public static char[] array_convers( char[] begin, int diff) {
 		
 		// Число вхождений 'word'
 		int count = 0;
@@ -32,7 +32,7 @@ public class Task_1_2_1_res {
 				System.out.println("В начальном массиве меньше 4 символов");
 				System.out.println("-------------------------------------");
 				}
-			
+				
 		}
 		
 		char[] result = new char [begin.length + diff*count];
@@ -68,11 +68,12 @@ public class Task_1_2_1_res {
 				}
 				
 			}
+			
 			System.out.println("---------------------------------------------------------");
 			System.out.println("НАЧАЛЬНАЯ СТРОКА С 'word' : ");
 			System.out.println("---------------------------------------------------------");
 			
-			Print (begin);
+			Print(begin);
 			
 			System.out.println("---------------------------------------------------------");
 			
@@ -80,7 +81,7 @@ public class Task_1_2_1_res {
 			System.out.println("КОНЕЧНАЯ СТРОКА С 'letter' : ");
 			System.out.println("---------------------------------------------------------");
 			
-			Print (result);
+			Print(result);
 			
 			System.out.println("---------------------------------------------------------");
 			
@@ -92,12 +93,13 @@ public class Task_1_2_1_res {
 	
 	
 	// Вывод массива на печать
-	public void Print (char array[]) {
+	public static void Print (char array[]) {
 		
 		for (int i = 0; i < array.length; i++) {
 			
 			System.out.print(array[i]);
 		}
+		
 		System.out.println("");
 		
 	}

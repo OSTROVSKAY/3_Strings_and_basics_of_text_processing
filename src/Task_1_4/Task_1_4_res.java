@@ -16,9 +16,11 @@ public class Task_1_4_res {
 				
 				isDigit = true;
 				}
+			
 			}
+		
 		return isDigit;
-		}
+	}
 	
 	
 	// Подсчёт количества чисел в строке и вывод чисел на печать :
@@ -35,18 +37,18 @@ public class Task_1_4_res {
 		for ( int j = line.length() - 1; j >= 0; j-- )
 			{
 			
-			if (isDigit(line.charAt(j) ) ) {stop ++;}
+			if (isDigit(line.charAt(j) ) ) { stop ++; }
 			
-			if( isDigit(line.charAt(j) ) & check == 0 ) {end ++;}
+			if( isDigit(line.charAt(j) ) & check == 0 ) { end ++; }
 			
 			if( j > 0)
 				{
 				if( isDigit(line.charAt(j)) & !isDigit(line.charAt(j-1)) ) { check = 1; }
 				}
-			
-			if( !isDigit(line.charAt(j) ) & stop == 0 ) {count_end ++;}
+				
+			if( !isDigit(line.charAt(j) ) & stop == 0 ) { count_end ++; }
 			}
-		
+			
 		count_end = count_end + end;
 		
 		int count = 0;
@@ -66,7 +68,7 @@ public class Task_1_4_res {
 				
 				System.out.print(line.charAt(i));
 				
-				if( i <= line.length() - 1 - count_end ) {count = 0;}
+				if( i <= line.length() - 1 - count_end ) { count = 0; }
 				
 				count1++;
 				
@@ -92,7 +94,7 @@ public class Task_1_4_res {
 			}
 		}
 		
-		if ( counter == 0) {System.out.print("ЧИСЕЛ НЕТ");}
+		if ( counter == 0) { System.out.print("ЧИСЕЛ НЕТ"); }
 		
 		System.out.println("");
 		
@@ -101,13 +103,13 @@ public class Task_1_4_res {
 	
 	
 	// Вывод строки на печать
-	public void Print_line (String line) {
+	public static void Print_line (String line) {
 		
-		for (int i = 0; i < line.length(); i++) {
-			
+		for (int i = 0; i < line.length(); i++)
+			{
 			System.out.print(line.charAt(i));
-		}
-		
+			}
+			
 		System.out.println("");
 		System.out.println("---------------------------------------------------");
 		

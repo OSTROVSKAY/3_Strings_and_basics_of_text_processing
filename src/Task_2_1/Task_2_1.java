@@ -1,6 +1,6 @@
 	
 // 1. Дан текст (строка). Найдите наибольшее количество подряд идущих пробелов в нем.
-// 1. Работа со строкой как с объектом типа String или StringBuilder
+// 1. Работа со строкой как с объектом типа String или StringBuilder.
 	
 package Task_2_1;
 	
@@ -24,14 +24,12 @@ public class Task_2_1 {
 		
 		String line = scanner.nextLine();
 		
-		Task_2_1_res Input = new Task_2_1_res();
-		
 		// Вывод на печать строки
-		Input.Print_line(line);
+		Task_2_1_res.Print_line(line);
 		
 		// ВЫЧИСЛЕНИЕ НАИБОЛЬШЕГО КОЛИЧЕСТВА ПОДРЯД ИДУЩИХ ПРОБЕЛОВ В СТРОКЕ
 		
-		int big_space = Input.big_space(line);
+		int big_space = Task_2_1_res.big_space(line);
 		
 		System.out.println("---------------------------------------------------------------------------");
 		System.out.println("ВЫЧИСЛЕНИЕ НАИБОЛЬШЕГО КОЛИЧЕСТВА ПОДРЯД ИДУЩИХ ПРОБЕЛОВ В СТРОКЕ : " + big_space);

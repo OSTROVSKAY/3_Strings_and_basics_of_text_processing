@@ -33,13 +33,12 @@ public class Task_1_1_2 {
 			{ 'b', 'a', 'c', 'k', 'C', 'o', 'l', 'o', 'r' }
 		};
 		
-		Task_1_1_2_res Input = new Task_1_1_2_res();
 		
 		//ПРЕОБРАЗОВАНИЕ МАССИВА НАЗВАНИЙ ПЕРЕМЕННЫХ ИЗ camelCase И CamelCase В snake_case
-		char[][] result = Input.array_convers(begin);
+		char[][] result = Task_1_1_2_res.array_convers(begin);
 		
 		// ПЕЧАТЬ ИТОГОВОГО МАССИВА
-		Input.Print(begin, result);
+		Task_1_1_2_res.Print(begin, result);
 		
 	}
 }

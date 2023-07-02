@@ -10,42 +10,42 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 	
 public class Task_3_1_res {
+	
+	// Ввод данных
+	public static int InputInt() {
 		
-		// Ввод данных
-		public int InputInt() {
-			
-			int check = 1;
-			int x = 0;
-			
-			Scanner scanner = new Scanner(System.in);
+		int check = 1;
+		int x = 0;
+		
+		Scanner scanner = new Scanner(System.in);
 				
-				do {
-					System.out.print("Введите Данные :.............: " + "  ");
-					String xx = scanner.nextLine();
-					
-					check = 1;
-					
-					try {
-						x = Integer.parseInt(xx);
-						}
-							catch (NumberFormatException e) {
-								
-								check = 0;
-								System.out.println("------------------------------------------");
-								System.out.println("Данные введены не правильно. Введите снова");
-								System.out.println("------------------------------------------");
+			do {
+				System.out.print("Введите Данные :.............: " + "  ");
+				String xx = scanner.nextLine();
+				
+				check = 1;
+				
+				try {
+					x = Integer.parseInt(xx);
+					}
+					catch (NumberFormatException e) {
+							
+							check = 0;
+							System.out.println("------------------------------------------");
+							System.out.println("Данные введены не правильно. Введите снова");
+							System.out.println("------------------------------------------");
 							}
-						
+							
 						System.out.println("----------------------------------");
 						
-						} while ( check == 0 );
-						
-						return x;
-			}
+					} while ( check == 0 );
+					
+			return x;
+		}
 	
 	
 	// Повтор работы программы
-	public int repeat() {
+	public static int repeat() {
 		
 		int check = 0;
 		
@@ -61,7 +61,7 @@ public class Task_3_1_res {
 				System.out.println("Введеные данные не равны 0 или 1. Введите снова.");
 				System.out.println("------------------------------------------------");
 				}
-			
+				
 		} while ( check < 0 | check > 1 );
 		
 		try {
@@ -73,27 +73,27 @@ public class Task_3_1_res {
 				System.out.println("Ошибка в работе программы");
 				System.out.println("-------------------------");
 				}
-			
+				
 		return check;
 		
 	}
 	
 	
 	// Сортировка абзацев по количеству предложений
-	public void bySentenceCount(String text) {
+	public static void bySentenceCount(String text) {
 		
 		String[] paragraphs = splitByParagraph(text);
 		
 		Arrays.sort(paragraphs, (paragraph1, paragraph2) ->
 			
 			paragraph1.split("[!?.:]+").length >= paragraph2.split("[!?.:]+").length ? 1 : -1);
-		
+			
 		print2(paragraphs);
 	}
 	
 	
 	// Сортировка слов по длине в каждом предложении
-	public void byWordLength(String text) {
+	public static void byWordLength(String text) {
 		
 		String[] paragraphs = splitByParagraph(text);
 		
@@ -114,7 +114,7 @@ public class Task_3_1_res {
 	Сортировка лексем в предложении по убыванию количества
 	вхождений заданного символа, а в случае равенства сортировка по алфавиту
 	*/
-	public void byLexemeCount(String text, char symbol) {
+	public static void byLexemeCount(String text, char symbol) {
 		
 		String[] paragraphs = splitByParagraph(text);
 		
@@ -143,7 +143,8 @@ public class Task_3_1_res {
 	используя разделитель, который определяется с помощью
 	регулярного выражения.
 	*/
-	public String[] splitByParagraph(String text) {
+	
+	public static String[] splitByParagraph(String text) {
 		
 		return text.split("\n");
 	}
@@ -155,25 +156,27 @@ public class Task_3_1_res {
 	используя разделитель, который определяется с помощью
 	регулярного выражения.
 	*/
-	public String[] splitByWord(String text) {
+	
+	public static String[] splitByWord(String text) {
 		
 		return text.split(" ");
 	}
 	
 	
 	// Печать результата ( печать строки ) : PrintResult
-	public void print1(String text) {
+	public static void print1(String text) {
 		
 		System.out.println(text);
 	}
 	
 	// Печать результата ( печать массива строк ) : PrintResult
-	public void print2(String[] paragraphs) {
+	public static void print2(String[] paragraphs) {
 		
 		for (String paragraph : paragraphs) {
 			
 			System.out.println(paragraph);
 		}
 	}
+	
 	
 }

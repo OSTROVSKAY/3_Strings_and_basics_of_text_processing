@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class Task_3_2_res {
 	
 	// АНАЛИЗАТОР ТЕКСТА XML-ДОКУМЕНТА
-	public void analyzer_xml(String xml) {
+	public static void analyzer_xml(String xml) {
 		
 		Pattern pattern = Pattern.compile(
 			

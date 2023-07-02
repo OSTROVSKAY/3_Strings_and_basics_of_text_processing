@@ -4,7 +4,7 @@ package Task_1_1;
 public class Task_1_1_2_res {
 	
 	//ПРЕОБРАЗОВАНИЕ МАССИВА НАЗВАНИЙ ПЕРЕМЕННЫХ ИЗ camelCase И CamelCase В snake_case
-	public char[][] array_convers(char begin[][]) {
+	public static char[][] array_convers(char begin[][]) {
 		
 		int size1 = 0;
 		
@@ -109,7 +109,7 @@ public class Task_1_1_2_res {
 	
 	
 	// ПЕЧАТЬ ИТОГОВОГО МАССИВА
-	public void Print( char begin[][], char result[][]) {
+	public static void Print( char begin[][], char result[][]) {
 		
 		System.out.println("          МАССИВ НАЗВАНИЯ ПЕРЕМЕННЫХ :");
 		System.out.println("---------------------------------------------------");

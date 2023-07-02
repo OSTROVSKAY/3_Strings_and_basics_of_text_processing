@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Task_1_3_2_res {
 	
 	// Ввод размера массива символов
-	public int InputInt() {
+	public static int InputInt() {
 		
 		int x = 0;
 		int check = 1;
@@ -28,24 +28,24 @@ public class Task_1_3_2_res {
 				System.out.println("Введённое число : " + x);
 				
 			} else {
-				
-				check = 0;
-				System.out.println("------------------------------------------");
-				System.out.println("Данные введены не правильно. Введите снова");
-				System.out.println("------------------------------------------");
-			}
-				
+					
+					check = 0;
+					System.out.println("------------------------------------------");
+					System.out.println("Данные введены не правильно. Введите снова");
+					System.out.println("------------------------------------------");
+					}
+					
 				System.out.println("-----------------------------------");
 				
-		} while ( check == 0 );
-		
+			} while ( check == 0 );
+			
 		return x;
 		
 	}
 	
 	
 	// Ввод одного символа для массива символов
-	public char Inp_char() throws IOException {
+	public static char Inp_char() throws IOException {
 	
 	int x = 0;
 	
@@ -61,19 +61,19 @@ public class Task_1_3_2_res {
 				System.out.println("------------------------------------------");
 				System.out.println("Данные введены не правильно. Введите снова");
 				System.out.println("------------------------------------------");
-			}
+				}
+				
+			char1 = (char)x;
 			
-		char1 = (char)x;
+		} while (char1 == '\n');
 		
-	} while (char1 == '\n');
-	
 	return char1;
 	
 	}
 	
 	
 	// Ввод массива символов
-	public char[] Inp_mass(int size) throws IOException {
+	public static char[] Inp_mass(int size) throws IOException {
 		
 		char mass[] = new char[size];
 		
@@ -85,15 +85,15 @@ public class Task_1_3_2_res {
 			
 			Character temp1 = temp;
 			
-			if ( temp1.charValue() == 0) {break;}
+			if ( temp1.charValue() == 0) { break; }
 			
-			else {
-				
+			else
+				{
 				mass[i] = temp;
 				System.out.println("-----------------------------------------------------------");
 				System.out.println("Номер элемента массива : " + i + "   "+ "Значение элемента массива : " + mass[i]);
 				}
-			
+				
 		}
 		System.out.println("-----------------------------------------------------------");
 		
@@ -113,14 +113,16 @@ public class Task_1_3_2_res {
 			if (digits[i] == char1) {
 				
 				isDigit = true;
+				
 				}
 			}
+			
 		return isDigit;
-		}
+	}
 	
 	
 	// РАСЧЁТ КОЛИЧЕСТВА ЦИФР В СТРОКЕ
-	public int num_dig(char[] massiv) {
+	public static int num_dig(char[] massiv) {
 		
 		int count = 0;
 		
@@ -142,7 +144,7 @@ public class Task_1_3_2_res {
 				{
 				System.out.print("НЕТ");
 				}
-			
+				
 			System.out.println("");
 			System.out.println("--------------------------------------------------------------------");
 			
@@ -151,16 +153,16 @@ public class Task_1_3_2_res {
 	
 	
 	// Вывод массива на печать
-	public void Print_mass(char[] massiv) {
+	public static void Print_mass(char[] massiv) {
 		
 		System.out.println("--------------------------------------------------------------------");
 		System.out.print("Массив : ");
 		
-		for(int i = 0; i < massiv.length; i++ ) {
-			
+		for(int i = 0; i < massiv.length; i++ )
+			{
 			System.out.print(massiv[i]);
-		}
-		
+			}
+			
 		System.out.println("");
 		System.out.println("--------------------------------------------------------------------");
 		
@@ -168,7 +170,7 @@ public class Task_1_3_2_res {
 	
 	
 	// Ввод целого числа для повтора работы программы
-	public int InputInt1() {
+	public static int InputInt1() {
 		
 		int check = 1;
 		int x = 0;
@@ -183,10 +185,16 @@ public class Task_1_3_2_res {
 			try {
 				x = Integer.parseInt(xx);
 				}
-			catch (NumberFormatException e) {
-				check = 0;
-				}
-			
+				
+				catch (NumberFormatException e)
+					{
+					check = 0;
+					
+					System.out.println("------------------------------------------");
+					System.out.println("Данные введены не правильно. Введите снова");
+					System.out.println("------------------------------------------");
+					}
+					
 		} while ( check == 0 );
 		
 		return x;
@@ -194,7 +202,7 @@ public class Task_1_3_2_res {
 	
 	
 	// Повтор работы программы
-	public int repeat() {
+	public static int repeat() {
 		
 		int check = 0;
 		
@@ -209,7 +217,7 @@ public class Task_1_3_2_res {
 				System.out.println("Введеные данные не равны 0 или 1. Введите снова.");
 				System.out.println("------------------------------------------------");
 				}
-			
+				
 		} while ( check < 0 | check > 1 );
 		
 		try {

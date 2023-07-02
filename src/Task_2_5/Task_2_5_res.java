@@ -4,7 +4,7 @@ package Task_2_5;
 public class Task_2_5_res {
 	
 	// ВЫЧИСЛЕНИЕ ЧИСЛА СИМВОЛОВ 'a' В ЗАДАННОЙ СТРОКЕ
-	public int calculation(String line) {
+	public static int calculation(String line) {
 		
 		int count = 0;
 		

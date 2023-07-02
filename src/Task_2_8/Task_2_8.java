@@ -27,15 +27,13 @@ public class Task_2_8 {
 	
 	String line = scanner.nextLine();
 	
-	Task_2_8_res Input = new Task_2_8_res();
-	
 	// Вывод на печать начальной строки
 	System.out.println("-------------------------------------------------------------------------------");
 	System.out.println("Вывод на печать начальной строки : " + line);
 	System.out.println("-------------------------------------------------------------------------------");
 	
 	// ОПРЕДЕЛЕНИЕ САМОГО ДЛИННОГО СЛОВА И ВЫВОД ЕГО НА ПЕЧАТЬ
-	int size = Input.long_word(line);
+	int size = Task_2_8_res.long_word(line);
 	
 	// Вывод на печать длины самого длинного слова
 	System.out.println("-------------------------------------------");
@@ -44,7 +42,7 @@ public class Task_2_8 {
 	
 	
 	// ВЫВОД НА ПЕЧАТЬ САМЫХ ДЛИННЫХ СЛОВ
-	Input.Print_word(line);
+	Task_2_8_res.Print_word(line);
 	
 	scanner.close();
 	

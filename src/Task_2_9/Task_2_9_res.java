@@ -4,10 +4,10 @@ package Task_2_9;
 public class Task_2_9_res {
 	
 	// Вывод на печать строки
-	public void Print_line(String line) {
+	public static void Print_line(String line) {
 		
 		for (int i = 0; i < line.length(); i++) {
-		
+			
 			System.out.print(line.charAt(i));
 		}
 	}
@@ -16,7 +16,7 @@ public class Task_2_9_res {
 	// ПОДСЧЁТ КОЛИЧЕСТВА АНГЛИЙСКИХ СТРОЧНЫХ ( МАЛЕНЬКИХ ) И ПРОПИСНЫХ ( БОЛЬШИХ ) БУКВ В СТРОКЕ
 	
 	// Подсчёт количества строчных ( маленьких ) букв в строке
-	public int find_lower_case_count(String line) {
+	public static int find_lower_case_count(String line) {
 		
 		System.out.println("СТРОЧНЫЕ АНГЛИЙСКИЕ БУКВЫ В СТРОКЕ : ");
 		System.out.println("------------------------------------");
@@ -46,7 +46,7 @@ public class Task_2_9_res {
 	
 	
 	// Подсчёт количества прописных ( больших ) букв в строке
-	public int find_upper_case_count(String line) {
+	public static int find_upper_case_count(String line) {
 		
 		System.out.println("ПРОПИСНЫЕ АНГЛИЙСКИЕ БУКВЫ В СТРОКЕ : ");
 		System.out.println("--------------------------------------");

@@ -10,18 +10,18 @@ public class Task_2_3_res {
 */
 	
 	// Вывод на печать строки
-	public void Print_line(String line) {
+	public static void Print_line(String line) {
 		
 		for (int i = 0; i < line.length(); i++) {
-			
+				
 				System.out.print(line.charAt(i));
 			}
 			
-		}
+	}
 	
 	
 	// ПРОВЕРКА - ЯВЛЯЕТСЯ ЛИ ЗАДАННОЕ СЛОВО ПАЛИНДРОМОМ
-	public boolean word_check( String line ) {
+	public static boolean word_check( String line ) {
 		
 		boolean check = false;
 		
@@ -37,7 +37,9 @@ public class Task_2_3_res {
 		
 		System.out.println("--------------------------------------------------------");
 		System.out.print("ВЫВОД НА ПЕЧАТЬ ИТОГОВОГО СЛОВА : ");
+		
 		Print_line(new_line);
+		
 		System.out.println("");
 		System.out.println("--------------------------------------------------------");
 		

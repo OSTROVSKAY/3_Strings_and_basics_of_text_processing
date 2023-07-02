@@ -4,17 +4,17 @@ package Task_2_7;
 public class Task_2_7_res {
 	
 	// Вывод на печать строки
-	public void Print_line(String line) {
+	public static void Print_line(String line) {
 		
 		for (int i = 0; i < line.length(); i++) {
-			
+				
 				System.out.print(line.charAt(i));
 			}
 	}
 	
 	
 	// УДАЛЕНИЕ ИЗ СТРОКИ ПОВТОРЯЮЩИХСЯ СИМВОЛОВ И ВСЕХ ПРОБЕЛОВ
-	public String delete_from_string(String line) {
+	public static String delete_from_string(String line) {
 		
 		StringBuilder stringBuilder = new StringBuilder();
 		

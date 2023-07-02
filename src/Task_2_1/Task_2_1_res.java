@@ -4,7 +4,7 @@ package Task_2_1;
 public class Task_2_1_res {
 	
 	// Вывод на печать строки
-	public void Print_line(String line) {
+	public static void Print_line(String line) {
 		
 		System.out.println("------------------------------------------------------------------------------------------------");
 		
@@ -22,7 +22,7 @@ public class Task_2_1_res {
 	
 	
 	// ВЫЧИСЛЕНИЕ НАИБОЛЬШЕГО КОЛИЧЕСТВА ПОДРЯД ИДУЩИХ ПРОБЕЛОВ В СТРОКЕ
-	public int big_space(String line) {
+	public static int big_space(String line) {
 		
 		int big_space = 0;
 		
@@ -36,27 +36,25 @@ public class Task_2_1_res {
 		
 		for( int j = line.length() - 1; j >= 0; j-- ) {
 			
-			if ( line.charAt(j) == ' ' & check1 == 0) {
-				
+			if ( line.charAt(j) == ' ' & check1 == 0)
+				{
 				end ++;
+				}
 				
-			}
-			
-			else {check1 = 1; break; }
+			else { check1 = 1; break; }
 			
 		}
 		
 		
 		for( int i = 0; i < line.length() - end; i++ ) {
 			
-			if( line.charAt(i) == ' ' ) {
-				
+			if( line.charAt(i) == ' ' )
+				{
 				temp++;
-			
-			}
-			
-			
-			else if ( line.charAt(i) != ' ' ){
+				}
+				
+				
+			else if ( line.charAt(i) != ' ' ) {
 				
 				if (temp > 0) {
 					
@@ -65,12 +63,12 @@ public class Task_2_1_res {
 					System.out.println("Номер серии подряд идущих пробелов : " + count + "  " + "Количество пробелов в серии : " + temp );
 					System.out.println("---------------------------------------------------------------------------");
 					
-					if( temp > big_space ) {
-					
-					big_space = temp;
+					if( temp > big_space )
+						{
+						big_space = temp;
+						}
+						
 				}
-				
-			}
 				
 				temp = 0;
 				
@@ -78,14 +76,14 @@ public class Task_2_1_res {
 			
 		}
 		
-		if( end > 0 ) {
-			
+		if( end > 0 )
+			{
 			System.out.println("Номер серии подряд идущих пробелов : " + (count + 1) + "  " + "Количество пробелов в серии : " + end );
 			System.out.println("---------------------------------------------------------------------------");
 			
 			if( end > big_space ) { big_space = end; }
-		}
-		
+			}
+			
 		return big_space;
 	}
 	

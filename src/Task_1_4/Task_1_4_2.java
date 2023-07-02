@@ -4,8 +4,6 @@
 	
 package Task_1_4;
 	
-import java.util.Scanner;
-	
 public class Task_1_4_2 {
 	
 	public static void main(String[] args) {
@@ -14,17 +12,15 @@ public class Task_1_4_2 {
 		System.out.println("ПРОГРАММА : РАСЧЁТ КОЛИЧЕСТВА ЧИСЕЛ В СТРОКЕ ( СТРОКА ЯВЛЯЕТСЯ МАССИВОМ СИМВОЛОВ )");
 		System.out.println("----------------------------------------------------------------------------------");
 		
-		Task_1_4_2_res Input = new Task_1_4_2_res();
-		
 		//Ввод размера массива символов
 		System.out.println("---------------------------------");
 		System.out.println("Введите размер массива символов :");
 		System.out.println("---------------------------------");
 		
-		int size = Input.InputInt();
+		int size = Task_1_4_2_res.InputInt();
 		
 		// Массив символов
-		char massiv[] = Input.Inp_mass(size);
+		char massiv[] = Task_1_4_2_res.Inp_mass(size);
 		
 		//char massiv[] = { '8','a', 'c', 'd', ' ','7','7', '8', 'b', 'c', '3', 'j', '5', '6'};
 		
@@ -33,11 +29,11 @@ public class Task_1_4_2 {
 		System.out.println("Вывод массива на печать :");
 		System.out.println("-------------------------");
 		
-		Input.Print_mass(massiv);
+		Task_1_4_2_res.Print_mass(massiv);
 		
 		// РАСЧЁТ КОЛИЧЕСТВА ЧИСЕЛ В СТРОКЕ И ВЫВОД ЧИСЕЛ НА ПЕЧАТЬ
 		
-		int counter = Input.countNumbers (massiv);
+		int counter = Task_1_4_2_res.countNumbers(massiv);
 		
 		System.out.println("----------------------------------------------");
 		System.out.println("Количество чисел в строке-массиве символов : " + counter);

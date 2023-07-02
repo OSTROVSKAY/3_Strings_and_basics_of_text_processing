@@ -4,17 +4,18 @@ package Task_2_8;
 public class Task_2_8_res {
 	
 	// Вывод на печать строки
-	public void Print_line(String line) {
+	public static void Print_line(String line) {
 		
 		for (int i = 0; i < line.length(); i++) {
 			
 			System.out.print(line.charAt(i));
+			
 			}
 	}
 	
 	
 	// Вычисление количества пробелов с начала строки
-	public int begin_space (String line) {
+	public static int begin_space (String line) {
 		
 		int begin = 0;
 		
@@ -29,7 +30,7 @@ public class Task_2_8_res {
 			
 			}
 			
-			else {check = 1; break;}
+			else { check = 1; break; }
 		
 		}
 		
@@ -38,7 +39,7 @@ public class Task_2_8_res {
 	
 	
 	// Вычисление количества пробелов с конца строки
-	public int end_space (String line) {
+	public static int end_space (String line) {
 		
 		int end = 0;
 		
@@ -52,15 +53,15 @@ public class Task_2_8_res {
 				
 				}
 				
-				else {check = 1; break;}
+				else { check = 1; break; }
 			}
-		
+			
 		return end;
 	}
 	
 	
 	// Вычисление длины слова с конца строки после пробелов
-	public int word_end_space(String line, int end) {
+	public static int word_end_space(String line, int end) {
 		
 		int size_end = 0;
 		
@@ -69,13 +70,12 @@ public class Task_2_8_res {
 		
 		for ( int i = line.length() - 1 - end; i >= 0; i--) {
 				
-				if ( line.charAt(i) != ' ' & check == 0) {
-					
+				if ( line.charAt(i) != ' ' & check == 0)
+					{
 					size_end ++;
+					}
 					
-			}
-				
-				else { check = 1; break; }
+			else { check = 1; break; }
 			
 		}
 		
@@ -84,7 +84,7 @@ public class Task_2_8_res {
 	
 	
 	// ОПРЕДЕЛЕНИЕ САМОГО ДЛИННОГО СЛОВА
-	public int long_word(String line) {
+	public static int long_word(String line) {
 		
 		int size = 0;
 		
@@ -97,25 +97,24 @@ public class Task_2_8_res {
 		
 		for ( int i = begin; i < line.length() - end; i++ ) {
 			
-			if ( line.charAt(i) != ' ' ) {
-				
+			if ( line.charAt(i) != ' ' )
+				{
 				temp ++;
+				}
 				
-			}
-			
 			else {
 				
 				if( temp > 0) {
 					
-					if( temp > size ) {
-						
+					if( temp > size )
+						{
 						size = temp;
-					}
-					
+						}
+						
 					//System.out.println(temp);
 					
-				}
-				
+					}
+					
 				temp = 0;
 				
 			}
@@ -125,23 +124,21 @@ public class Task_2_8_res {
 		
 		int size_end =  word_end_space(line, end);
 		
-		if ( size_end > size) {
-			
+		if ( size_end > size)
+			{
 			size = size_end;
+			}
 			
-		}
-		
 		return size;
 	}
 	
 	
 	// ВЫВОД НА ПЕЧАТЬ САМЫХ ДЛИННЫХ СЛОВ
-	public void Print_word(String line) {
+	public static void Print_word(String line) {
 		
 		System.out.println("------------------------------------");
 		System.out.println("ВЫВОД НА ПЕЧАТЬ САМЫХ ДЛИННЫХ СЛОВ :");
 		System.out.println("------------------------------------");
-		
 		
 		int begin = begin_space (line);
 		
@@ -155,12 +152,11 @@ public class Task_2_8_res {
 		
 		for ( int i = begin; i < line.length() - end; i++ ) {
 			
-			if ( line.charAt(i) != ' ' ) {
-				
+			if ( line.charAt(i) != ' ' )
+				{
 				temp ++;
+				}
 				
-			}
-			
 			else {
 				
 				if( long_size == temp ) {
@@ -168,6 +164,7 @@ public class Task_2_8_res {
 					count++;
 					
 					System.out.print("Слово № " + count + " : ");
+					
 					for ( int j = i - temp ; j < i; j++ ) {
 						
 						System.out.print(line.charAt(j));

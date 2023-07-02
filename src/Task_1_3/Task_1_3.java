@@ -23,16 +23,15 @@ public class Task_1_3 {
 			System.out.println("Введите начальную строку для подсчёта цифр :");
 			System.out.println("--------------------------------------------");
 			System.out.print("Введите данные......... :   ");
-			String line = scanner.nextLine();
 			
-			Task_1_3_res Input = new Task_1_3_res();
+			String line = scanner.nextLine();
 			
 			System.out.println("-------------------------------------------------------------------------");
 			System.out.println("Начальная строка для подсчёта цифр : " + line);
 			System.out.println("-------------------------------------------------------------------------");
 			
 			// Расчёт количества цифр в строке
-			int count = Input.countDigits(line);
+			int count = Task_1_3_res.countDigits(line);
 			
 			System.out.println("--------------------------------------");
 			System.out.println("Расчёт количества цифр в строке : " + count);
@@ -42,7 +41,7 @@ public class Task_1_3 {
 			System.out.println("ПРОДОЛЖИТЬ РАБОТУ ПРОГРАММЫ ?   1 - ДА. 0 - НЕТ");
 			System.out.println("-----------------------------------------------");
 			
-			check = Input.repeat();
+			check = Task_1_3_res.repeat();
 			
 		} while ( check == 1 );
 		

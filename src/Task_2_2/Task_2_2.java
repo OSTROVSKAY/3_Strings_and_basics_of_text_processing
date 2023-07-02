@@ -23,18 +23,18 @@ public class Task_2_2 {
 	
 	String line = scanner.nextLine();
 	
-	Task_2_2_res Input = new Task_2_2_res();
-	
 	// Вывод на печать строки
 	System.out.println("------------------------------------------------------------------------------------------------");
 	System.out.print("ВЫВОД НА ПЕЧАТЬ НАЧАЛЬНОЙ СТРОКИ : ");
-	Input.Print_line(line);
+	
+	Task_2_2_res.Print_line(line);
+	
 	System.out.println("");
 	System.out.println("------------------------------------------------------------------------------------------------");
 	
 	// ВСТАВКА В СТРОКЕ ПОСЛЕ КАЖДОГО СИМВОЛА 'a' СИМВОЛА 'b'
 	
-	StringBuilder strBuilder = Input.insert_line (line);
+	StringBuilder strBuilder = Task_2_2_res.insert_line(line);
 	
 	String line_new = strBuilder.toString();
 	

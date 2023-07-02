@@ -27,21 +27,18 @@ public class Task_1_5 {
 	
 	String line = scanner.nextLine();
 	
-	Task_1_5_res Inp = new Task_1_5_res();
-	
 	// УДАЛЕНИЕ В СТРОКЕ ВСЕХ ЛИШНИХ ПРОБЕЛОВ
-	String new_line = Inp.removeExtraSpaces(line);
+	String new_line = Task_1_5_res.removeExtraSpaces(line);
 	
 	if (new_line.length() > 0)
-		
 		{
 		System.out.println("-----------------------------------------------------------------------");
 		System.out.println("Строка после удаления всех лишних пробелов : " + new_line);
 		System.out.println("-----------------------------------------------------------------------");
 		}
 		
-	else {
-		
+	else
+		{
 		System.out.println("-------------------------------------------");
 		System.out.println("Начальная строка состоит только из пробелов");
 		System.out.println("-------------------------------------------");

@@ -23,25 +23,25 @@ public class Task_2_3 {
 	
 	String line = scanner.nextLine();
 	
-	Task_2_3_res Input = new Task_2_3_res();
-	
 	// Вывод на печать начального слова
 	System.out.println("------------------------------------------------------------------------------------------------");
 	System.out.print("ВЫВОД НА ПЕЧАТЬ НАЧАЛЬНОГО СЛОВА : ");
-	Input.Print_line(line);
+	
+	Task_2_3_res.Print_line(line);
+	
 	System.out.println("");
 	System.out.println("------------------------------------------------------------------------------------------------");
 	
 	// ПРОВЕРКА - ЯВЛЯЕТСЯ ЛИ ЗАДАННОЕ СЛОВО ПАЛИНДРОМОМ
-	boolean check = Input.word_check(line);
+	boolean check = Task_2_3_res.word_check(line);
 	
-	if (check == true) 
+	if (check == true)
 		{
 		System.out.println("-----------------------------------");
 		System.out.println("ЗАДАННОЕ СЛОВО ЯВЛЯЕТСЯ ПАЛИНДРОМОМ");
 		System.out.println("-----------------------------------");
 		}
-	
+		
 	else
 		{
 		System.out.println("--------------------------------------");
@@ -50,6 +50,6 @@ public class Task_2_3 {
 		}
 		
 		scanner.close();
-	
+		
 	}
 }

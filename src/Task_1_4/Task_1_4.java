@@ -13,8 +13,6 @@ public class Task_1_4 {
 		System.out.println("ПРОГРАММА : РАСЧЁТ КОЛИЧЕСТВА ЧИСЕЛ В СТРОКЕ");
 		System.out.println("--------------------------------------------");
 		
-		Task_1_4_res Inp = new Task_1_4_res();
-		
 		Scanner scanner = new Scanner(System.in);
 		
 		// Ввод начальной строки для подсчёта чисел
@@ -28,11 +26,11 @@ public class Task_1_4 {
 		System.out.println("---------------------------------------------------");
 		System.out.print("Вывод строки на печать :");
 		
-		Inp.Print_line (line);
+		Task_1_4_res.Print_line(line);
 		
 		// РАСЧЁТ КОЛИЧЕСТВА ЧИСЕЛ В СТРОКЕ И ВЫВОД ЧИСЕЛ НА ПЕЧАТЬ
 		
-		int counter = Inp.countNumbers(line);
+		int counter = Task_1_4_res.countNumbers(line);
 		
 		System.out.println("-------------------------------");
 		System.out.println("Количество чисел в строке : " + counter);

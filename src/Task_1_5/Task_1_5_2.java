@@ -16,22 +16,20 @@ public class Task_1_5_2 {
 		System.out.println("ПРОГРАММА : УДАЛЕНИЕ В СТРОКЕ ВСЕХ ЛИШНИХ ПРОБЕЛОВ ( СТРОКА ЯВЛЯЕТСЯ МАССИВОМ СИМВОЛОВ )");
 		System.out.println("----------------------------------------------------------------------------------------");
 		
-		Task_1_5_2_res Input = new Task_1_5_2_res();
-		
 		//Ввод размера массива символов
 		System.out.println("---------------------------------");
 		System.out.println("Введите размер массива символов :");
 		System.out.println("---------------------------------");
 		
-		int size = Input.InputInt();
+		int size = Task_1_5_2_res.InputInt();
 		
 		// Массив символов
-		char massiv[] = Input.Inp_mass(size);
+		char massiv[] = Task_1_5_2_res.Inp_mass(size);
 		
 		//char massiv[] = { '-','-', '-', 'd', '-', '-','t','t','-','o','o','o','-','-','-','-','7', '-', '-', 'c', '-', 'j','-', 'j','-', '-'};
 		
 		// Расчёт длины нового массива символов
-		int size1 = Input.Array_length (massiv);
+		int size1 = Task_1_5_2_res.Array_length(massiv);
 		
 		// Вывод массива на печать
 		if (size1 > 0)
@@ -40,7 +38,7 @@ public class Task_1_5_2 {
 			System.out.println("Вывод массива на печать :");
 			System.out.println("-------------------------");
 			
-			Input.Print_mass(massiv);
+			Task_1_5_2_res.Print_mass(massiv);
 			}
 		
 		// Объявление итогового массива символов
@@ -50,16 +48,19 @@ public class Task_1_5_2 {
 			char[] massiv_end = new char[size1];
 			
 			// УДАЛЕНИЕ В МАССИВЕ СИМВОЛОВ ВСЕХ ЛИШНИХ ПРОБЕЛОВ
-			massiv_end = Input.removing_spaces( massiv, size1);
+			massiv_end = Task_1_5_2_res.removing_spaces( massiv, size1);
 			
 			System.out.println("------------------------------------------------------------------------------------------");
+			
 			System.out.print("Массив символов после удаления всех лишних пробелов : ");
 			System.out.print(massiv_end);
+			
 			System.out.println("");
 			System.out.println("------------------------------------------------------------------------------------------");
 		}
 		
-		else {
+		else
+			{
 			System.out.println("--------------------------------------------------");
 			System.out.println("Начальный массив символов содержит только пробелы");
 			System.out.println("--------------------------------------------------");

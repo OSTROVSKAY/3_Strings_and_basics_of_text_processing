@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Task_1_5_2_res {
 	
 	// Ввод размера массива символов
-	public int InputInt() {
+	public static int InputInt() {
 		
 		int x = 0;
 		int check = 1;
@@ -24,14 +24,15 @@ public class Task_1_5_2_res {
 				System.out.println("----------------------------------");
 				System.out.println("Введённое число : " + x);
 				
-			} else {
-				
-				check = 0;
-				System.out.println("------------------------------------------");
-				System.out.println("Данные введены не правильно. Введите снова");
-				System.out.println("------------------------------------------");
-				}
-				
+			} else
+					{
+					check = 0;
+					
+					System.out.println("------------------------------------------");
+					System.out.println("Данные введены не правильно. Введите снова");
+					System.out.println("------------------------------------------");
+					}
+					
 				System.out.println("-----------------------------------");
 				
 		} while ( check == 0 );
@@ -42,7 +43,7 @@ public class Task_1_5_2_res {
 	
 	
 	// Ввод одного символа для массива символов
-	public char Inp_char() {
+	public static char Inp_char() {
 		
 		int x = 0;
 		
@@ -59,17 +60,17 @@ public class Task_1_5_2_res {
 					System.out.println("Данные введены не правильно. Введите снова");
 					System.out.println("------------------------------------------");
 					}
-				
+					
 			char1 = (char)x;
 			
-			} while (char1 == '\n');
-			
-			return char1;
-		}
+		} while (char1 == '\n');
+		
+		return char1;
+	}
 	
 	
 	// Ввод массива символов
-	public char[] Inp_mass(int size) {
+	public static char[] Inp_mass(int size) {
 		
 		char mass[] = new char[size];
 		
@@ -81,16 +82,18 @@ public class Task_1_5_2_res {
 			
 			Character temp1 = temp;
 			
-			if ( temp1.charValue() == 0) {break;}
+			if ( temp1.charValue() == 0) { break; }
 			
-			else {
-				
+			else
+				{
 				mass[i] = temp;
+				
 				System.out.println("-----------------------------------------------------------");
 				System.out.println("Номер элемента массива : " + i + "   "+ "Значение элемента массива : " + mass[i]);
 				}
 			
 		}
+		
 		System.out.println("-----------------------------------------------------------");
 		
 		return mass;
@@ -98,24 +101,24 @@ public class Task_1_5_2_res {
 	
 	
 	// Вывод массива на печать
-	public void Print_mass(char[] massiv) {
+	public static void Print_mass(char[] massiv) {
 		
 		System.out.println("--------------------------------------------------------------------");
 		System.out.print("Массив символов : ");
 		
-		for(int i = 0; i < massiv.length; i++ ) {
-			
+		for(int i = 0; i < massiv.length; i++ )
+			{
 			System.out.print(massiv[i]);
 			}
 			
 		System.out.println("");
 		System.out.println("--------------------------------------------------------------------");
 		
-		}
+	}
 	
 	
 	// Расчёт длины нового массива символов
-	public int Array_length (char massiv[]) {
+	public static int Array_length (char massiv[]) {
 		
 		int length = 0;
 		
@@ -127,14 +130,12 @@ public class Task_1_5_2_res {
 		
 		for (int i = 0; i < massiv.length; i++) {
 			
-			if ( massiv[i] == ' ' & check1 == 0 ) {
-				
+			if ( massiv[i] == ' ' & check1 == 0 )
+				{
 				begin ++;
+				}
 				
-			}
-			
-			else {check1 = 1;}
-			
+			else { check1 = 1; }
 		}
 		
 		//System.out.println(begin);
@@ -150,12 +151,10 @@ public class Task_1_5_2_res {
 			if( massiv[j] == ' ' & check2 == 0)
 				
 				{
-				
 				end ++;
-				
 				}
-			
-			else {check2 = 1;}
+				
+			else { check2 = 1; }
 		}
 		
 		//System.out.println(end);
@@ -167,16 +166,15 @@ public class Task_1_5_2_res {
 		
 		for ( int b = begin; b <= massiv.length - 1 - end; b++ ) {
 			
-			if( massiv[b] != ' ' & check4 == 0 ) {
-				
+			if( massiv[b] != ' ' & check4 == 0 )
+				{
 				begin1 ++;
-				
 				}
-			
-			else {check4 = 1;}
+				
+			else { check4 = 1; }
 			
 			}
-		
+			
 		// System.out.println(begin1);
 		
 		// Расчёт пробелов в середине строки
@@ -186,21 +184,19 @@ public class Task_1_5_2_res {
 		
 		for ( int a = (begin + begin1); a <= massiv.length - 1 - end; a++ ) {
 			
-			if ( massiv[a] == ' ' ) {
-				
+			if ( massiv[a] == ' ' )
+				{
 				temp++;
+				}
 				
-			}
-			
-			
-			else {
+				else
+				{
 				//System.out.println(temp-1);
 				
 				middle = middle + (temp-1);
 				
 				temp = 0;
-			
-			}
+				}
 			
 		}
 		
@@ -214,7 +210,7 @@ public class Task_1_5_2_res {
 	
 	
 	// УДАЛЕНИЕ В СТРОКЕ ВСЕХ ЛИШНИХ ПРОБЕЛОВ
-	public char[] removing_spaces( char massiv[], int size) {
+	public static char[] removing_spaces( char massiv[], int size) {
 		
 		char[] massiv_end = new char[size];
 		
@@ -225,13 +221,12 @@ public class Task_1_5_2_res {
 		
 		for (int i = 0; i < massiv.length; i++) {
 			
-			if ( massiv[i] == ' ' &  check1 == 0 ) {
-				
+			if ( massiv[i] == ' ' &  check1 == 0 )
+				{
 				begin ++;
+				}
 				
-			}
-			
-			else {check1 = 1; break;}
+			else { check1 = 1; break; }
 			
 		}
 		
@@ -248,12 +243,10 @@ public class Task_1_5_2_res {
 			if( massiv[j] == ' ' & check2 == 0)
 				
 				{
-				
 				end ++;
-				
 				}
 				
-			else {check2 = 1;}
+			else { check2 = 1; }
 		}
 		
 		//System.out.println(end);
@@ -266,13 +259,12 @@ public class Task_1_5_2_res {
 		
 		for ( int b = begin; b <= massiv.length - 1 - end; b++ ) {
 			
-			if( massiv[b] != ' ' & check4 == 0 ) {
-				
+			if( massiv[b] != ' ' & check4 == 0 )
+				{
 				begin1 ++;
-				
 				}
 				
-			else {check4 = 1;}
+			else { check4 = 1; }
 			
 		}
 		
@@ -290,26 +282,24 @@ public class Task_1_5_2_res {
 		
 		int check7 = 0;
 		
-		int count = 0;
+		//int count = 0;
 		
 		for ( int a = begin; a < massiv.length - end; a++ ) {
 			
-			if ( massiv[a] == ' ' & a >= (begin + begin1)) {
-				
+			if ( massiv[a] == ' ' & a >= (begin + begin1))
+				{
 				temp++;
 				check7 = 0;
+				}
 				
-			}
-			
-			else if (a >= (begin + begin1) & check7 == 0) {
-				
+			else if (a >= (begin + begin1) & check7 == 0)
+				{
 				//System.out.println(temp-1);
 				
-				temp1 = temp1 + (temp -1);
+				temp1 = temp1 + (temp - 1);
 				temp = 0;
-				check7 =1;
-			
-			}
+				check7 = 1;
+				}
 			//System.out.println(temp1);
 			
 			
@@ -319,7 +309,7 @@ public class Task_1_5_2_res {
 				
 				//System.out.print("(" + (a -begin - temp1) + ") " );
 				
-				massiv_end[a -begin - temp1] = massiv[a];
+				massiv_end[a - begin - temp1] = massiv[a];
 				
 				check5 = 1;
 				

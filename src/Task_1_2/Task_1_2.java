@@ -14,10 +14,8 @@ public class Task_1_2 {
 		// Начальная строка с "word"
 		String word = "word : displaying word count in microsoft word";
 		
-		Task_1_2_res Input = new Task_1_2_res();
-		
 		// Конечная строка с "letter"
-		String letter = Input.changeWords(word);
+		String letter = Task_1_2_res.changeWords(word);
 		
 		System.out.println("------------------------------------------------------------------------------------");
 		System.out.println("НАЧАЛЬНАЯ СТРОКА С 'word'  :  " + word);

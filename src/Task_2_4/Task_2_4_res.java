@@ -4,7 +4,7 @@ package Task_2_4;
 public class Task_2_4_res {
 	
 	// СОСТАВЛЕНИЕ СЛОВА ИЗ ЧАСТЕЙ ДРУГОГО СЛОВА
-	public String build_word(String word) {
+	public static String build_word(String word) {
 		
 		String new_word = null;
 		
@@ -35,18 +35,19 @@ public class Task_2_4_res {
 				}
 				
 			}
-		
+			
 		if ( a1 != null & a2 != null & a3 != null )
 				{
 				new_word = a1 + a2 + a3 + a1;
 				}
-			
-		else {
-			System.out.println("-------------------");
-			System.out.println("СЛОВО НЕ СОСТАВЛЕНО");
-			System.out.println("-------------------");
-		}
-		
+				
+			else
+				{
+				System.out.println("-------------------");
+				System.out.println("СЛОВО НЕ СОСТАВЛЕНО");
+				System.out.println("-------------------");
+				}
+				
 		return new_word;
 	}
 	

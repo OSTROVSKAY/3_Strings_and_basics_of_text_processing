@@ -15,7 +15,7 @@ public class Task_1_2_res {
 								  & word.charAt(i + 1) == 'o'
 								  & word.charAt(i + 2) == 'r'
 								  & word.charAt(i + 3) == 'd') {
-				
+								
 				strBuilder.append("letter");
 				
 				i += 3;

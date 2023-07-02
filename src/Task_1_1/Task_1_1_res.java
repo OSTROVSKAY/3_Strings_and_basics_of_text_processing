@@ -18,7 +18,7 @@ public class Task_1_1_res {
 */
 	
 	//ПРЕОБРАЗОВАНИЕ МАССИВА НАЗВАНИЙ ПЕРЕМЕННЫХ ИЗ camelCase И CamelCase В snake_case
-	public String [] to_snake_case (String [] CamelCase) {
+	public static String [] to_snake_case (String [] CamelCase) {
 		
 		String [] snake_case = new String[CamelCase.length];
 		

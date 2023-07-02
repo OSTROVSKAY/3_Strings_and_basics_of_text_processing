@@ -13,22 +13,21 @@ public class Task_1_1 {
 	
 	// Массив переменных в camelCase И CamelCase
 	String [] CamelCase = { "HumpBackNotation", "getChars", "BackColor", "charAt", "CamelCase", "equalsIgnoreCase", "CamelHumpedWord", "toLowerCase",
-			"MixedCase", "toUpperCase", "WordsStrungTogether", "mixedCase", "WordsRunTogether", "toCharArray", "WordCase", "backColor"};
-		
+							
+							"MixedCase", "toUpperCase", "WordsStrungTogether", "mixedCase", "WordsRunTogether", "toCharArray", "WordCase", "backColor" };
+							
 	// System.out.println("--------------------------------------------------------------------------------------------------------");
 	// System.out.println("Массив переменных в camelCase и CamelCase : " + String.join(" , ", CamelCase));
 	// System.out.println("--------------------------------------------------------------------------------------------------------");
 	
-	Task_1_1_res Input = new Task_1_1_res();
-	
 	// Массив для переменных в snake_case
-	String [] snake_case = Input.to_snake_case(CamelCase);
+	String [] snake_case = Task_1_1_res.to_snake_case(CamelCase);
 	
 	//System.out.println("--------------------------------------------------------------------------------------------------------");
 	//System.out.println("Массив переменных в snake_case : " + String.join(" , ", snake_case));
 	//System.out.println("--------------------------------------------------------------------------------------------------------");
-	
-	
+		
+		
 		if ( CamelCase.length == snake_case.length ) {
 			
 			System.out.println("          МАССИВ НАЗВАНИЯ ПЕРЕМЕННЫХ :");

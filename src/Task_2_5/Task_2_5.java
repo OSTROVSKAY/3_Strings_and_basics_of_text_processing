@@ -13,8 +13,6 @@ public class Task_2_5 {
 	System.out.println("ПРОГРАММА : ВЫЧИСЛЕНИЕ ЧИСЛА СИМВОЛОВ 'a' В ЗАДАННОЙ СТРОКЕ");
 	System.out.println("-----------------------------------------------------------");
 	
-	Task_2_5_res Input = new Task_2_5_res();
-	
 	Scanner scanner = new Scanner(System.in);
 	
 	// Ввод строку
@@ -31,7 +29,7 @@ public class Task_2_5 {
 	System.out.println("------------------------------------------------------------------------------");
 	
 	// ВЫЧИСЛЕНИЕ ЧИСЛА СИМВОЛОВ 'a' В ЗАДАННОЙ СТРОКЕ
-	int count = Input.calculation(line);
+	int count = Task_2_5_res.calculation(line);
 	
 	System.out.println("------------------------------------------");
 	System.out.println("ЧИСЛО СИМВОЛОВ 'a' В ЗАДАННОЙ СТРОКЕ : " + count);

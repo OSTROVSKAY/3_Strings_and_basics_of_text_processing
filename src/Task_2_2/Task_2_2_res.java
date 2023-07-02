@@ -2,42 +2,43 @@
 package Task_2_2;
 	
 public class Task_2_2_res {
+	
+	// Вывод на печать строки
+	public static void Print_line(String line) {
 		
-		// Вывод на печать строки
-		public void Print_line(String line) {
+		for (int i = 0; i < line.length(); i++) {
 			
-			for (int i = 0; i < line.length(); i++) {
+			System.out.print(line.charAt(i));
+		}
+		
+	}
+	
+	
+	// ВСТАВКА В СТРОКЕ ПОСЛЕ КАЖДОГО СИМВОЛА 'a' СИМВОЛА 'b'
+	
+	public static StringBuilder insert_line (String line) {
+		
+		StringBuilder strBuilder = new StringBuilder();
+		
+		for (int i = 0; i < line.length(); i++) {
+			
+			if(line.charAt(i) != 'a') {
 				
-				System.out.print(line.charAt(i));
+				strBuilder.append(line.charAt(i));
+				
+			}
+			
+			else if(line.charAt(i) == 'a') {
+				
+				strBuilder.append(line.charAt(i));
+				
+				strBuilder.append('b');
+				
 			}
 			
 		}
 		
-		// ВСТАВКА В СТРОКЕ ПОСЛЕ КАЖДОГО СИМВОЛА 'a' СИМВОЛА 'b'
-		
-		public StringBuilder insert_line (String line) {
-			
-			StringBuilder strBuilder = new StringBuilder();
-			
-			for (int i = 0; i < line.length(); i++) {
-				
-				if(line.charAt(i) != 'a') {
-					
-					strBuilder.append(line.charAt(i));
-					
-				}
-				
-				else if(line.charAt(i) == 'a'){
-					
-					strBuilder.append(line.charAt(i));
-					
-					strBuilder.append('b');
-					
-				}
-				
-			}
-			
-			return strBuilder;
-		}
+		return strBuilder;
+	}
 	
 }

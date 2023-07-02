@@ -4,7 +4,7 @@ package Task_2_10;
 public class Task_2_10_res {
 	
 	// Вывод на печать строки
-	public void Print_line(String line) {
+	public static void Print_line(String line) {
 		
 		for (int i = 0; i < line.length(); i++) {
 			
@@ -14,7 +14,7 @@ public class Task_2_10_res {
 	
 	
 	// Разделение строки на простые, вопросительные и восклицательные предложения
-	public String[] split(String line) {
+	public static String[] split(String line) {
 		
 		StringBuilder stringBuilder = new StringBuilder();
 		
@@ -37,7 +37,7 @@ public class Task_2_10_res {
 	
 	
 	// Вывод на печать простых предложений
-	public void Print_point(String[] new_line1) {
+	public static void Print_point(String[] new_line1) {
 		
 		System.out.print("Предложения, оканчивающиеся точкой : ");
 		
@@ -68,9 +68,10 @@ public class Task_2_10_res {
 				
 			}
 			
-			if (count == 0) {System.out.print("Предложений нет"); }
+			if (count == 0) { System.out.print("Предложений нет"); }
 			
 		}
+		
 		System.out.println("");
 		System.out.println("------------------------------------------------------------------------");
 		
@@ -78,7 +79,7 @@ public class Task_2_10_res {
 	
 	
 	// Вывод на печать восклицательных предложений
-	public void Print_exclam(String[] new_line1) {
+	public static void Print_exclam(String[] new_line1) {
 		
 		System.out.print("Предложения, оканчивающиеся восклицательным знаком : ");
 		
@@ -111,7 +112,8 @@ public class Task_2_10_res {
 			
 		}
 		
-		if (count == 0) {System.out.print("Предложений нет"); }
+		if (count == 0) { System.out.print("Предложений нет"); }
+		
 		System.out.println("");
 		System.out.println("------------------------------------------------------------------------");
 		
@@ -119,7 +121,7 @@ public class Task_2_10_res {
 	
 	
 	// Вывод на печать вопросительных предложений
-	public void Print_interrog(String[] new_line1) {
+	public static void Print_interrog(String[] new_line1) {
 		
 		System.out.print("Предложения, оканчивающиеся вопросительным знаком : ");
 		
@@ -146,11 +148,13 @@ public class Task_2_10_res {
 				for ( int j = 0; j < new_line1[i].length(); j++) {
 				
 				System.out.print(new_line1[i].charAt(j));
+				
 				}
 			}
 		}
 		
-		if (count == 0) {System.out.print("Предложений нет"); }
+		if (count == 0) { System.out.print("Предложений нет"); }
+		
 		System.out.println("");
 		System.out.println("------------------------------------------------------------------------");
 		
@@ -164,7 +168,7 @@ public class Task_2_10_res {
 	3 - Предложения оканчивающиеся вопросительным знаком
 	*/
 	
-	public int count_sentence(String line) {
+	public static int count_sentence(String line) {
 		
 		// Разделение строки на простые, вопросительные и восклицательные предложения
 		String[] new_line1 = split(line);

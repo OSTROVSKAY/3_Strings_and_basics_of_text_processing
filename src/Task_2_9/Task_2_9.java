@@ -27,8 +27,6 @@ public class Task_2_9 {
 	
 	String line = scanner.nextLine();
 	
-	Task_2_9_res Input = new Task_2_9_res();
-	
 	// Вывод на печать начальной строки
 	System.out.println("-------------------------------------------------------------------------------");
 	System.out.println("Вывод на печать начальной строки : " + line);
@@ -37,14 +35,14 @@ public class Task_2_9 {
 	// ПОДСЧЁТ КОЛИЧЕСТВА АНГЛИЙСКИХ СТРОЧНЫХ И ПРОПИСНЫХ БУКВ В СТРОКЕ
 	
 	// Подсчёт количества прописных ( больших ) букв в строке
-	int upper_case_count = Input.find_upper_case_count(line);
+	int upper_case_count = Task_2_9_res.find_upper_case_count(line);
 	
 	System.out.println("-----------------------------------------------------");
 	System.out.println("Количество прописных ( больших ) букв в строке : " + upper_case_count);
 	System.out.println("-----------------------------------------------------");
 	
 	// Подсчёт количества строчных ( маленьких ) букв в строке
-	int lower_case_count = Input.find_lower_case_count(line);
+	int lower_case_count = Task_2_9_res.find_lower_case_count(line);
 	
 	System.out.println("------------------------------------------------------");
 	System.out.println("Количество строчных ( маленьких ) букв в строке : " + lower_case_count);

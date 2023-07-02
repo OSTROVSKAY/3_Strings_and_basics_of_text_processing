@@ -11,10 +11,6 @@
 
 package Task_3_2;
 	
-import java.util.regex.Matcher;
-	
-import java.util.regex.Pattern;
-	
 public class Task_3_2 {
 	
 	public static void main(String[] args) {
@@ -22,8 +18,6 @@ public class Task_3_2 {
 	System.out.println("-------------------------------------------");
 	System.out.println("ПРОГРАММА : АНАЛИЗАТОР ТЕКСТА XML-ДОКУМЕНТА");
 	System.out.println("-------------------------------------------");
-	
-	Task_3_2_res Input = new Task_3_2_res();
 	
 	String xml = "<notes>\n" +
 			
@@ -61,7 +55,7 @@ public class Task_3_2 {
 	System.out.println("-------------------------------------------");
 	System.out.println("АНАЛИЗ XML-ДОКУМЕНТА :");
 	System.out.println("-------------------------------------------");
-	Input.analyzer_xml(xml);
+	Task_3_2_res.analyzer_xml(xml);
 	System.out.println("-------------------------------------------");
 	
 	}

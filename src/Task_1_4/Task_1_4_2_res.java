@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Task_1_4_2_res {
 	
 	// Ввод размера массива символов
-	public int InputInt() {
+	public static int InputInt() {
 		
 		int x = 0;
 		int check = 1;
@@ -36,13 +36,13 @@ public class Task_1_4_2_res {
 				
 		} while ( check == 0 );
 		
-		return x;
-		
+	return x;
+	
 	}
 	
 	
 	// Ввод одного символа для массива символов
-	public char Inp_char() {
+	public static char Inp_char() {
 	
 	int x = 0;
 	
@@ -59,17 +59,17 @@ public class Task_1_4_2_res {
 				System.out.println("Данные введены не правильно. Введите снова");
 				System.out.println("------------------------------------------");
 				}
-			
+				
 		char1 = (char)x;
-		
-		} while (char1 == '\n');
-		
+			
+			} while (char1 == '\n');
+			
 		return char1;
 	}
 	
 	
 	// Ввод массива символов
-	public char[] Inp_mass(int size) {
+	public static char[] Inp_mass(int size) {
 		
 		char mass[] = new char[size];
 		
@@ -81,16 +81,18 @@ public class Task_1_4_2_res {
 			
 			Character temp1 = temp;
 			
-			if ( temp1.charValue() == 0) {break;}
+			if ( temp1.charValue() == 0) { break; }
 			
-			else {
-				
+			else
+				{
 				mass[i] = temp;
+				
 				System.out.println("-----------------------------------------------------------");
 				System.out.println("Номер элемента массива : " + i + "   "+ "Значение элемента массива : " + mass[i]);
 				}
 			
 		}
+		
 		System.out.println("-----------------------------------------------------------");
 		
 		return mass;
@@ -111,12 +113,13 @@ public class Task_1_4_2_res {
 				isDigit = true;
 				}
 			}
+			
 			return isDigit;
 		}
 	
 	
 	// Вывод массива на печать
-	public void Print_mass(char[] massiv) {
+	public static void Print_mass(char[] massiv) {
 		
 		System.out.println("--------------------------------------------------------------------");
 		System.out.print("Массив символов : ");
@@ -124,6 +127,7 @@ public class Task_1_4_2_res {
 		for(int i = 0; i < massiv.length; i++ ) {
 			
 			System.out.print(massiv[i]);
+			
 			}
 			
 		System.out.println("");
@@ -146,18 +150,18 @@ public class Task_1_4_2_res {
 		for ( int j = massiv.length - 1; j >= 0; j-- )
 			{
 			
-			if (isDigit(massiv[j] ) ) { stop ++;}
+			if (isDigit(massiv[j] ) ) { stop ++; }
 			
-			if( isDigit(massiv[j] ) & check == 0 ) {end ++;}
+			if( isDigit(massiv[j] ) & check == 0 ) { end ++; }
 			
 			if( j > 0)
 				{
 				if( isDigit(massiv[j]) & !isDigit(massiv[j-1]) ) { check = 1; }
 				}
-			
-			if( !isDigit(massiv[j]) & stop == 0 ) {count_end ++;}
+				
+			if( !isDigit(massiv[j]) & stop == 0 ) { count_end ++; }
 			}
-		
+			
 		count_end = count_end + end;
 		
 		int count = 0;
@@ -177,7 +181,7 @@ public class Task_1_4_2_res {
 				
 				System.out.print(massiv[i]);
 				
-				if( i <= massiv.length - 1 - count_end ) {count = 0;}
+				if( i <= massiv.length - 1 - count_end ) { count = 0; }
 				
 				count1++;
 				
@@ -189,21 +193,21 @@ public class Task_1_4_2_res {
 				}
 			}
 			
-			else if (count == 0 & massiv[i] != '\n' & count_end != massiv.length ){
+			else if (count == 0 & massiv[i] != '\n' & count_end != massiv.length ) {
 				
 				if ( (counter + 1 ) > 1 ) {
-				
-				System.out.println("");
-				System.out.println("------------------------");
-				
-				count++;
-				
+					
+					System.out.println("");
+					System.out.println("------------------------");
+					
+					count++;
+					
 				}
 			}
 			
 		}
 		
-		if ( counter == 0) {System.out.print("ЧИСЕЛ НЕТ");}
+		if ( counter == 0) { System.out.print("ЧИСЕЛ НЕТ"); }
 		
 		System.out.println("");
 		
